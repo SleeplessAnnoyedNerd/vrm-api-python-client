@@ -145,11 +145,11 @@ class VRM_API:
         return stats
     
     def get_diag(self, inst_id, data_points=100):
-    	"""
+        """
         @params - inst_id (installation id)
-	"""
-	if not self._is_initialized():
-	    return None
+        """
+        if not self._is_initialized():
+            return None
         
         data_dict = {'count': data_points}
         request_url = self.DIAG_ENDPOINT.format(inst_id=inst_id)
